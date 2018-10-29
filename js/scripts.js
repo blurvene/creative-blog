@@ -1,6 +1,9 @@
 
 
 $(document).ready(()=>{
+  $('.header-menu .menu-icon').on("click",event=>{
+    $(event.currentTarget).parent().children('.nav-menu').toggleClass('visible');
+  });
 
   $('.map').on('click',event=>{
     $(event.currentTarget).toggleClass('opened');
