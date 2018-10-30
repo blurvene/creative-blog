@@ -1173,20 +1173,21 @@ a,span{
       }
       @media only screen and (max-width: 1035px){
         .menu-icon{
-          display: block;
+          display: block !important;
 
         }
         .nav-menu{
-          display:none ;
+          display:none !important;
+          flex-direction: column !important ;
         }
         .visible{
-          display: flex;
+          display: flex !important;
         }
       }
       @media only screen and (min-width: 1036px){
         .nav-menu{
-          display: flex ;
-          flex-direction: row;
+          display: flex !important;
+          flex-direction: row ;
         }
 
       }
@@ -1201,8 +1202,9 @@ a,span{
         top:100px;
         z-index: 100;
         a{
-          margin: 15px 25px;
+          margin: 20px 40px;
         }
+        padding-bottom: 10px;
       }
 
 

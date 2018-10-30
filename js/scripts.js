@@ -9,7 +9,21 @@ $(document).ready(()=>{
     }, 700);
   });
 
-
+  $(window).scroll(function() {
+        if ($(document).scrollTop() > 100) {
+            $('.header-menu .menu-icon').show();
+            $('.header-menu .nav-menu').css({
+              'flex-direction': 'column'
+            })
+        }
+        else {
+            $('.header-menu .menu-icon').hide();
+            $('.header-menu .nav-menu').removeClass('visible').css({
+              display: 'flex' ,
+              'flex-direction': 'row'
+            })
+        }
+    });
   $('.header-menu .menu-icon').on("click",event=>{
 
     $(event.currentTarget).parent().children('.nav-menu').toggleClass('visible');
