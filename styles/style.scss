@@ -114,12 +114,15 @@ a,span{
 @keyframes menu-animaion {
   from{
     color: white;
+    padding-bottom: 18px;
+    border-bottom: 2px solid white;
   }
   to{
     color:#fce38a;
-    border-bottom: 2px solid #fce38a;
+
     padding-bottom: 18px;
-    margin-bottom: 0;
+    border-bottom: 2px solid #fce38a;
+    //margin-bottom: 0;
     //padding-bottom: 10px;
   }
 }
@@ -1112,7 +1115,7 @@ a,span{
   .active{
       //margin-left:-10px;
       //margin-top:-10px;
-
+      transform: translate(-10px,-10px);
       -webkit-box-shadow: 10px 10px 0 0 #95e1d3 ;
       box-shadow: 10px 10px 0 0 #95e1d3 ;
 
@@ -1162,7 +1165,9 @@ a,span{
         flex-direction: row;
 
         a{
-          margin: 20px 40px;
+
+          padding: 20px 0;
+          margin: 0 40px;
 
         }
         a:hover{
@@ -1202,7 +1207,8 @@ a,span{
         top:100px;
         z-index: 100;
         a{
-          margin: 20px 40px;
+          margin: 0;
+          padding: 20px 40px;
         }
         padding-bottom: 10px;
       }

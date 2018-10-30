@@ -53,20 +53,14 @@ $(document).ready(()=>{
   //Animation of gallery images
   $('.img-gallery .img-container').on('mouseenter',event=>{
     $(event.currentTarget).find('.content-span').fadeIn(300);
-    $(event.currentTarget).animate({
-      left:'-10px',
-      top:'-10px',
-    },100).addClass('active');
+    $(event.currentTarget).addClass('active');
     $(event.currentTarget).find('img:first').css('opacity',0.3);
 
   });
 
   $('.img-gallery .img-container').on('mouseleave',event=>{
     $(event.currentTarget).find('.content-span').fadeOut(300);
-    $(event.currentTarget).animate({
-      left:'0px',
-      top:'0px',
-    },1).removeClass('active');
+    $(event.currentTarget).removeClass('active');
     $(event.currentTarget).find('img:first').css('opacity',1);
   });
 

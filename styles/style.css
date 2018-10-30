@@ -121,12 +121,13 @@ a, span {
 
 @keyframes menu-animaion {
   from {
-    color: white; }
+    color: white;
+    padding-bottom: 18px;
+    border-bottom: 2px solid white; }
   to {
     color: #fce38a;
-    border-bottom: 2px solid #fce38a;
     padding-bottom: 18px;
-    margin-bottom: 0; } }
+    border-bottom: 2px solid #fce38a; } }
 .footer-area {
   background-color: #f8f8f8;
   border: 1px solid #f8f8f8;
@@ -869,6 +870,7 @@ a, span {
       font-weight: bold;
       color: #fff; }
   .img-gallery .active {
+    transform: translate(-10px, -10px);
     -webkit-box-shadow: 10px 10px 0 0 #95e1d3;
     box-shadow: 10px 10px 0 0 #95e1d3; }
 
@@ -904,7 +906,8 @@ a, span {
         display: flex;
         flex-direction: row; }
         .header-area .header-container .header-menu .nav-menu a {
-          margin: 20px 40px; }
+          padding: 20px 0;
+          margin: 0 40px; }
         .header-area .header-container .header-menu .nav-menu a:hover {
           animation-name: menu-animaion;
           animation-duration: 0.3s;
@@ -936,7 +939,8 @@ a, span {
         z-index: 100;
         padding-bottom: 10px; }
         .header-area .header-container .header-menu .visible a {
-          margin: 20px 40px; }
+          margin: 0;
+          padding: 20px 40px; }
     .header-area .header-container .header-middle {
       display: flex;
       flex-direction: column;
