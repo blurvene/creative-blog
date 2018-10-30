@@ -2,13 +2,27 @@
 @import url(./reset.css);
 .grid-container {
   padding-top: 2%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 0 0;
-  grid-template-areas: "pic1 pic2 pic3 pic4" "pic5 pic6 pic3 pic7"; }
-  .grid-container .pic3 {
-    grid-row: span 2; }
+  display: grid; }
+  @media only screen and (min-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 0 0;
+      grid-template-areas: "pic1 pic2 pic3 pic4" "pic5 pic6 pic3 pic7"; }
+      .grid-container .pic3 {
+        grid-row: span 2; } }
+  @media only screen and (max-width: 899px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column; }
+      .grid-container .pic1 {
+        display: none; }
+      .grid-container .pic5 {
+        display: none; }
+      .grid-container .pic6 {
+        display: none; }
+      .grid-container .pic7 {
+        display: none; } }
   .grid-container .hidden-content {
     display: none;
     text-align: center;
@@ -85,12 +99,6 @@
     .grid-container .pic7 .picture {
       content: url("../img/content/works-gallery/pic7.png"); }
 
-.active {
-  margin-left: -20px;
-  margin-top: -20px;
-  -webkit-box-shadow: 10px 10px 0 0 #95e1d3;
-  box-shadow: 10px 10px 0 0 #95e1d3; }
-
 .btn-rotate {
   transform: rotate(900deg); }
 
@@ -117,7 +125,8 @@ a, span {
   to {
     color: #fce38a;
     border-bottom: 2px solid #fce38a;
-    padding-bottom: 10px; } }
+    padding-bottom: 18px;
+    margin-bottom: 0; } }
 .footer-area {
   background-color: #f8f8f8;
   border: 1px solid #f8f8f8;
@@ -150,6 +159,9 @@ a, span {
       .footer-area .footer {
         flex-direction: column;
         align-items: center; }
+        .footer-area .footer .first {
+          align-items: center;
+          text-align: center !important; }
         .footer-area .footer .first h3, .footer-area .footer .follow, .footer-area .footer .email {
           margin-left: auto;
           margin-right: auto; }
@@ -287,7 +299,9 @@ a, span {
         width: 100% !important;
         margin-bottom: 25px;
         margin-right: 0 !important;
-        margin-left: 0 !important; }
+        margin-left: 0 !important;
+        align-items: center;
+        text-align: center !important; }
         .blog-line .blog-item .blog-image .date-box {
           left: 0 !important;
           bottom: 0 !important; } }
@@ -422,11 +436,16 @@ a, span {
       margin-bottom: 30px; }
       @media only screen and (max-width: 800px) {
         .clients .clients-list .clients-line {
-          flex-direction: column; }
+          flex-direction: column;
+          align-items: center; }
           .clients .clients-list .clients-line .client {
             width: 100% !important;
             flex-direction: column !important;
-            margin: 0 auto; } }
+            align-items: center !important;
+            margin: 0 auto; }
+            .clients .clients-list .clients-line .client .client-reply {
+              align-items: center;
+              text-align: center !important; } }
       .clients .clients-list .clients-line .client {
         margin-right: 30px;
         width: 50%;
@@ -735,9 +754,9 @@ a, span {
   background-color: #95e1d3; }
 
 .line-container {
-  width: 1000px;
+  width: 80%;
   height: 100%;
-  margin: 0 10%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -849,6 +868,9 @@ a, span {
       font-family: 'Montserrat',serif;
       font-weight: bold;
       color: #fff; }
+  .img-gallery .active {
+    -webkit-box-shadow: 10px 10px 0 0 #95e1d3;
+    box-shadow: 10px 10px 0 0 #95e1d3; }
 
 .header-area {
   background-image: url("../img/header-bg.png");
@@ -859,6 +881,7 @@ a, span {
     height: 100%;
     margin: 0 auto; }
     .header-area .header-container .header-menu {
+      height: 50px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -871,12 +894,16 @@ a, span {
       .header-area .header-container .header-menu .menu-icon {
         display: none;
         width: 60px;
-        height: 60px; }
+        height: 60px;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        background-color: rgba(198, 105, 89, 0.55);
+        z-index: 100; }
       .header-area .header-container .header-menu .nav-menu {
         display: flex;
         flex-direction: row; }
         .header-area .header-container .header-menu .nav-menu a {
-          width: 70px;
           margin: 20px 40px; }
         .header-area .header-container .header-menu .nav-menu a:hover {
           animation-name: menu-animaion;
@@ -884,12 +911,7 @@ a, span {
           animation-fill-mode: forwards; }
       @media only screen and (max-width: 1035px) {
         .header-area .header-container .header-menu .menu-icon {
-          display: block;
-          position: fixed;
-          right: 20px;
-          top: 20px;
-          background-color: rgba(198, 105, 89, 0.55);
-          z-index: 100; }
+          display: block; }
         .header-area .header-container .header-menu .nav-menu {
           display: none; }
         .header-area .header-container .header-menu .visible {
