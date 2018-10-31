@@ -900,7 +900,7 @@ a,span{
           display: none;
         }
         .quote{
-          width: 100% important;
+          width: 100% !important;
           margin: 0 !important;
           p{
             font-size: 14px !important;
@@ -959,6 +959,11 @@ a,span{
           }
         }
       }
+
+
+    }
+    .hidden{
+      display: none;
     }
 
   }
@@ -1249,21 +1254,22 @@ a,span{
         height: 3px;
         margin-bottom: 70px;
       }
-      button{
+      .learn-more{
         background:none;
         border:3px solid white;
         color:white;
         width: 160px;
-        height: 40px;
+        padding: 15px 0;
         font-size: 14px;
         font-family: 'Montserrat',serif;
         font-weight: bold;
         margin-bottom: 50px;
         margin-left: auto;
         margin-right: auto;
+
         @include transition(0.6s);
       }
-      button:hover{
+      .learn-more:hover{
         transform: scale(1.3);
       }
     }
