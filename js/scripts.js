@@ -88,6 +88,7 @@ $(document).ready(()=>{
 
   $('.services-list .item').on('click',event=>{
     $(event.currentTarget).find('.btn-down').toggleClass('btn-rotate');
+    $('.services-list .hidden-text').hide();
     $(event.currentTarget).next().slideToggle();
   });
 
